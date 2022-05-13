@@ -1,10 +1,11 @@
-const { westernLettingsScrape } = require("./westernLettings");
+const { westernLettingsScrape } = require("./Letting Sites/WesternLettings");
 const PORT = 8000;
 
 const axios = require("axios");
 const express = require("express");
 const cheerio = require("cheerio");
 const pretty = require("pretty");
+const { newtonScrape } = require("./Letting Sites/Newton");
 
 const app = express();
 
@@ -14,6 +15,5 @@ const westernLettingsURL =
 
 app.listen(PORT, () => console.log(`Server running on Port ${PORT}`));
 
-console.log("Western Lettings Details");
-
-westernLettingsScrape();
+//westernLettingsScrape();
+newtonScrape();
